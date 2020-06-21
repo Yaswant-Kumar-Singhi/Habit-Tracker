@@ -1,0 +1,12 @@
+#container{
+    background-image: repeating-linear-gradient(grey,black);
+    height: 5rem;
+    color:whitesmoke;
+    border:2px solid whitesmoke;
+    margin:2rem;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

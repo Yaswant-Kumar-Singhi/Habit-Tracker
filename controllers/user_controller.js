@@ -13,7 +13,7 @@ module.exports.signUp = function(req,res){
     }
     else{
         return res.render('user_sign_up',{
-            title:"Codeail | Sign Up"
+            title:"Habit Tracker | Sign Up"
         })
     }
 }
@@ -24,7 +24,7 @@ module.exports.signIn = function(req,res){
     }
 
     return res.render('user_sign_in',{
-        title : "Codeail | Sign In"
+        title : "Habit Tracker | Sign In"
     })
 }
 
