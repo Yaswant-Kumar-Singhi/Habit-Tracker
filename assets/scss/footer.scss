@@ -1,0 +1,30 @@
+footer{
+    height: 5rem;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#footerContent{
+    font-size: 15px;
+    display: inline;
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    p{
+        color: whitesmoke;
+    }
+}
+
+#footerActionLinks{
+    font-size: 15px;
+    display: inline;
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+   
+}
