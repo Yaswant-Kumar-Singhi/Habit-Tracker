@@ -1,0 +1,23 @@
+header {
+  background-color: #6a68e7;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif; }
+
+#pageLogo {
+  position: relative;
+  left: -18%;
+  font-size: 25px; }
+  #pageLogo a {
+    text-decoration: none;
+    color: whitesmoke; }
+
+#headerActionIcons {
+  position: relative;
+  right: -15%; }
+  #headerActionIcons a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 5px; }

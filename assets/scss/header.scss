@@ -1,0 +1,28 @@
+header{
+    background-color: rgb(106, 104, 231);
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#pageLogo{
+    position: relative;
+    left:-18%;
+    font-size: 25px;
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+}
+
+#headerActionIcons{
+    position: relative;
+    right: -15%;
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 5px;
+    }
+}
