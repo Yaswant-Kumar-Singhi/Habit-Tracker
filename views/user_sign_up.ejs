@@ -1,4 +1,18 @@
+<link rel="stylesheet" href="/css/user_sign_up.css">
 
-<h1>
-    Sign Up
-</h1>
+<div id="pageHeading">
+    <h1 id="headingContent"> 
+        Sign Up, to track your Habit !!!
+    </h1>
+</div>
+
+<section id="formContent">
+<form action="/users/create" method="POST">
+    <input type="text" name="name"  placeholder="Your name" required><br> 
+    <input type="email" name="email"  placeholder="Your email" required><br>
+    <input type="password" name="password"  placeholder="password" required><br>
+    <input type="password" name="confirmpassword"  placeholder="Confirm Password" required> <br>
+    <input type="submit"  value = "SignUp">
+
+</form>
+</section>
