@@ -7,6 +7,17 @@ const port = 8000;
 const app = express();
 
 
+
+
+//set up a view engine
+app.set('view engine','ejs');
+app.set('views','./views');
+
+
+// use express router
+app.use('/',require('./routes'));
+
+
 //server is on
 app.listen(port,function(err,data){
     if(err){
