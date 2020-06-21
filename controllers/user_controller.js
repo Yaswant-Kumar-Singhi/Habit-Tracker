@@ -1,40 +1,32 @@
 const User = require('../models/user');
 
+
 module.exports.profile = function(req,res){
-    if(req.cookies.user_id){
-        User.findById(req.cookies.user_id, function(err,user){
-            if(user){
-                return res.render('user_profile',{
-                    title : "User Profile",
-                    user : user
-                })
-
-            }
-            return res.redirect('/users/sign-in');
-        })
-
-    }else{
-        return res.redirect('/users/sign-in');
-    }
-}
-
-
-module.exports.signUp = function(req,res){
-   
-        return res.render('user_sign_up',{
-            title:"Sign Up"
-        })
-    }
-
-
-    
-module.exports.signIn = function(req,res){
-   
-    return res.render('user_sign_in',{
-        title:"Sign In"
+    return res.render('user_profile',{
+        title : 'user controller working. Ejs loaded successfully '
     })
 }
 
+module.exports.signUp = function(req,res){
+    if(req.isAuthenticated()){
+       return res.redirect('/users/profile');
+    }
+    else{
+        return res.render('user_sign_up',{
+            title:"Codeail | Sign Up"
+        })
+    }
+}
+
+module.exports.signIn = function(req,res){
+    if(req.isAuthenticated()){
+      return res.redirect('/users/profile');
+    }
+
+    return res.render('user_sign_in',{
+        title : "Codeail | Sign In"
+    })
+}
 
 module.exports.create = function(req,res){
     if(req.body.password != req.body.confirmpassword){
