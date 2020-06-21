@@ -21,3 +21,5 @@ footer {
   #footerActionLinks a {
     text-decoration: none;
     color: whitesmoke; }
+  #footerActionLinks li {
+    list-style-type: none; }

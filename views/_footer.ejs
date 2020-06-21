@@ -1,9 +1,29 @@
 <footer>
+    
+
+<% if(locals.user) {%>
     <div id="footerContent">
         <a href="/">Habbit Tracker</a>
         <p>Records your Habbit!</p>
     </div>
+
     <div id="footerActionLinks">
-        <a href="/">Home</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="/users/profile">Profile</a></li>
     </div>
+<%} else {%>
+    
+    <div id="footerContent">
+        <a href="/">@Habbit Tracker</a>
+        <p> A social webSite</p>
+    </div>
+
+    <div id="footerActionLinks">
+        <li><a href="/">Home</a></li>
+        
+    </div>
+    
+    
+<%}  %>
+
 </footer>
