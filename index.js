@@ -1,13 +1,18 @@
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const saasMiddleware = require('node-sass-middleware');
+const cookieParser = require('cookie-parser');
 
 
 const db = require('./config/mongoose');
 
+
 const port = 8000;
 
 const app = express();
+
+app.use(express.urlencoded());
+app.use(cookieParser());
 
 app.use(saasMiddleware({
     src: './assets/scss',
