@@ -7,7 +7,7 @@ const port = 8000;
 const app = express();
 
 
-
+//server is on
 app.listen(port,function(err,data){
     if(err){
         console.log("Error in running the server on Listening ", err);
@@ -15,3 +15,4 @@ app.listen(port,function(err,data){
     }
     console.log(`Succcussfully connected to ${port}`);
 });
+
