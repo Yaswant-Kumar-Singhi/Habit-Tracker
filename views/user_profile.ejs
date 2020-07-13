@@ -20,6 +20,7 @@
             <th>Day of Week</th>
             <th>Frequency Per Week</th>
             <th>Action</th>
+            
         </tr>
         <% for(habit of habit){ %>
            
@@ -30,11 +31,9 @@
                     <td><%= habit.habit %></td>
                     <td><%= habit.day %></td>
                     <td><%= habit.frequency %></td>
-                    <a href="/delete-task/?id=<%= i._id %>"> 
-                        <button class="btn btn-danger">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </a>
+                    
+                    
+                    <td><a href="/delete/?id=<%= habit._id %>">Del </a></td>
                 </tr>
            
        
