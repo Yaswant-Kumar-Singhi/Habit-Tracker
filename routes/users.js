@@ -15,6 +15,8 @@ router.get('/sign-in',usersController.signIn);
 
 router.post('/create',usersController.create);
 
+router.get('/delete-task/',usersController.delete);
+
 
 
 //use passport as a middleware for auth

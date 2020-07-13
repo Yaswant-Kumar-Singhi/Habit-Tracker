@@ -1,9 +1,13 @@
 const User = require('../models/user');
-
+const Habit = require('../models/habit')
 
 module.exports.profile = function(req,res){
-    return res.render('user_profile',{
-        title : 'user controller working. Ejs loaded successfully '
+    
+    Habit.find({}).populate("user").exec(function(err, habit){
+        return res.render('user_profile', {
+            title: "Codeial | Home",
+            habit:  habit
+        });
     })
 }
 
@@ -60,3 +64,13 @@ module.exports.destroySession = function(req,res){
     req.logout();
     return res.redirect('/')
 }
+
+module.exports.delete = function(req,res){
+    Habit.findByIdAndDelete(req.query.id,function(err){
+        if(err){
+            console.log("Error in delting the task");
+            return ;
+        }
+        return res.redirect('back');
+    });
+};

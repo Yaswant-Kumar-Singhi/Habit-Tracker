@@ -9,3 +9,17 @@
   display: flex;
   justify-content: center;
   align-items: center; }
+
+#habit-list-container {
+  text-align: center; }
+  #habit-list-container table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: blue; }
+  #habit-list-container td, #habit-list-container th {
+    border: 1px solid #574747;
+    text-align: left;
+    padding: 8px; }
+  #habit-list-container tr:nth-child(even) {
+    background-color: #a3d8db; }

@@ -4,9 +4,44 @@
     Welcome, <%= user.name%>!!!
 </section>
 
-<form action="" method="POST">
-    <input type="text" name="habit" placeholder="Enter Your Habit" required><br>
-    <input type="text" name="day" placeholder="Enter Your Habit Day" required><br>
-    <input type="text" name="frequency" placeholder="Enter Your Habit frequency" required><br>
+<center>
+<form action="habit/create" method="POST">
+    <input type="text" name="habit" placeholder="Enter Your Habit" required>
+    <input type="text" name="day" placeholder="Enter Your Habit Day" required>
+    <input type="text" name="frequency" placeholder="Enter Your Habit frequency" required>
     <input type="submit" value="Submit Habit"><br>
 </form>
+
+<% if(locals.user){%>
+<div id="habit-list-container">
+    <table>
+        <tr>
+            <th>Habit Description</th>
+            <th>Day of Week</th>
+            <th>Frequency Per Week</th>
+            <th>Action</th>
+        </tr>
+        <% for(habit of habit){ %>
+           
+                
+            <% if(locals.user.id == habit.user.id) {%> 
+            
+                <tr>
+                    <td><%= habit.habit %></td>
+                    <td><%= habit.day %></td>
+                    <td><%= habit.frequency %></td>
+                    <a href="/delete-task/?id=<%= i._id %>"> 
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </a>
+                </tr>
+           
+       
+            <%}  %>
+        <%} %>
+    </ul>
+</table>
+</div>
+<%}%>
+</center>
