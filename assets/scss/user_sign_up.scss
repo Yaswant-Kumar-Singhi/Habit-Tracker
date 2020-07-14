@@ -6,7 +6,7 @@
 
 #pageHeading{
     margin: 1rem;
-    height: 5rem;
+    height: 4rem;
     background-image: repeating-linear-gradient(gray,black);
     display: flex;
     justify-content: center;
@@ -17,8 +17,8 @@
 }
 
 #formContent{
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -27,7 +27,7 @@
     
     
     input{
-        font-size: 2rem;
+        font-size: 1rem;
         padding: 15px;
         margin: 10px;
     }

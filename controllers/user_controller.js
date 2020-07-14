@@ -5,7 +5,7 @@ module.exports.profile = function(req,res){
     
     Habit.find({}).populate("user").exec(function(err, habit){
         return res.render('user_profile', {
-            title: "Codeial | Home",
+            title: "HabitTracker | Profile",
             habit:  habit
         });
     })
@@ -64,13 +64,3 @@ module.exports.destroySession = function(req,res){
     req.logout();
     return res.redirect('/')
 }
-
-module.exports.delete = function(req,res){
-    Habit.findByIdAndDelete(req.query.id,function(err){
-        if(err){
-            console.log("Error in delting the task");
-            return ;
-        }
-        return res.redirect('back');
-    });
-};
