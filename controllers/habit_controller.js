@@ -20,4 +20,15 @@ module.exports.create = function(req,res){
 
 }
 
+
+module.exports.delete = function(req,res){
+    Habit.findByIdAndDelete(req.query.id,function(err){
+        if(err){
+            console.log("Error in delting the task");
+            return ;
+        }
+        return res.redirect('back');
+    });
+};
+
     
