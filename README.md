@@ -67,7 +67,7 @@ npm strat
 ![](https://github.com/Yaswant-Kumar-Singhi/Habit-Tracker/blob/master/assets/screenshort/AddingHabbit.JPG)
 
 #### Description of Routes
-<br>
+
 `users/sign-up:` Creting a user  <br>
 `users/sign-in`: Login a user <br>
 `users/profile`: Going to user profile <br>
