@@ -1,5 +1,7 @@
 const User = require('../models/user');
-const Habit = require('../models/habit')
+const Habit = require('../models/habit');
+
+const moment = require('moment');
 
 module.exports.profile = function(req,res){
     
@@ -16,7 +18,8 @@ module.exports.viewAllHabit = function(req,res){
     Habit.find({}).populate("user").exec(function(err, habit){
         return res.render('list', {
             title: "HabitTracker | Profile",
-            habit:  habit
+            habit:  habit,
+            moment : moment
         });
     })
 }
