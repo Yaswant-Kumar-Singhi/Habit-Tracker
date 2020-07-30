@@ -1,0 +1,13 @@
+#viewalluserhabit {
+  text-align: center; }
+  #viewalluserhabit table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: blue; }
+  #viewalluserhabit td, #viewalluserhabit th {
+    border: 1px solid #574747;
+    text-align: left;
+    padding: 8px; }
+  #viewalluserhabit tr:nth-child(even) {
+    background-color: #a3d8db; }

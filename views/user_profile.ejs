@@ -7,8 +7,8 @@
 <center>
 <form action="habit/create" method="POST">
     <input type="text" name="habit" placeholder="Enter Your Habit" required>
-    <input type="text" name="day" placeholder="Enter Your Habit Day" required>
-    <input type="text" name="frequency" placeholder="Enter Your Habit frequency" required>
+    <input type="text" name="day" placeholder="Enter Habit Day" required>
+    <input type="number" name="frequency" placeholder="Enter Habit frequency" required>
     <input type="submit" value="Submit Habit"><br>
 </form>
 
@@ -20,7 +20,7 @@
             <th>Day of Week</th>
             <th>Frequency Per Week</th>
             <th>Action</th>
-            
+            <th>Done/Not Done</th>
         </tr>
         <% for(habit of habit){ %>
            
@@ -33,7 +33,14 @@
                     <td><%= habit.frequency %></td>
                     
                     
-                    <td><a href="/users/habit/delete/?id=<%= habit._id %>">Del </a></td>
+                    <td>
+                        <a href="/users/habit/delete/?id=<%= habit._id %>">Del </a>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" >
+                    </td>
+                    
                 </tr>
            
        

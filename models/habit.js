@@ -12,7 +12,7 @@ const habitSchema = new mongoose.Schema({
         required : true
     },
     frequency : {
-        type : String,
+        type : Number,
         required :true
     },
     user : {

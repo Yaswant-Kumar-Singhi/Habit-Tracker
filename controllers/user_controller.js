@@ -11,6 +11,17 @@ module.exports.profile = function(req,res){
     })
 }
 
+module.exports.viewAllHabit = function(req,res){
+    
+    Habit.find({}).populate("user").exec(function(err, habit){
+        return res.render('list', {
+            title: "HabitTracker | Profile",
+            habit:  habit
+        });
+    })
+}
+
+
 module.exports.signUp = function(req,res){
     if(req.isAuthenticated()){
        return res.redirect('/users/profile');
