@@ -1,8 +1,12 @@
+//require global files
+const moment = require('moment');
+
+//require local files
 const User = require('../models/user');
 const Habit = require('../models/habit');
 
-const moment = require('moment');
 
+//exporting user profile
 module.exports.profile = function(req,res){
     
     Habit.find({}).populate("user").exec(function(err, habit){
@@ -13,6 +17,7 @@ module.exports.profile = function(req,res){
     })
 }
 
+//controller for viewing all the habits of a user
 module.exports.viewAllHabit = function(req,res){
     
     Habit.find({}).populate("user").exec(function(err, habit){
@@ -24,7 +29,7 @@ module.exports.viewAllHabit = function(req,res){
     })
 }
 
-
+//signing up a user
 module.exports.signUp = function(req,res){
     if(req.isAuthenticated()){
        return res.redirect('/users/profile');
@@ -36,6 +41,7 @@ module.exports.signUp = function(req,res){
     }
 }
 
+//signing a user
 module.exports.signIn = function(req,res){
     if(req.isAuthenticated()){
       return res.redirect('/users/profile');
@@ -46,6 +52,7 @@ module.exports.signIn = function(req,res){
     })
 }
 
+//creating user
 module.exports.create = function(req,res){
     if(req.body.password != req.body.confirmpassword){
         return res.redirect('back');
@@ -69,7 +76,7 @@ module.exports.create = function(req,res){
 }
 
 
-
+//user session creation and desturction
 module.exports.createSession = function(req,res){
     return res.redirect('/');
 }

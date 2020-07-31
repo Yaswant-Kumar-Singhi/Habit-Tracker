@@ -1,6 +1,7 @@
+//requiring mongoose
 const mongoose = require('mongoose');
 
-
+//creating a schema for habit
 const habitSchema = new mongoose.Schema({
     habit : {
         type : String,
@@ -23,5 +24,6 @@ const habitSchema = new mongoose.Schema({
     timestamps : true
 });
 
+//exporting schema
 const habit = mongoose.model('habit',habitSchema);
 module.exports = habit;

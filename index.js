@@ -1,25 +1,27 @@
+//requiring global files
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const saasMiddleware = require('node-sass-middleware');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
-
-
-
-const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
-const passportLocal = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo')(session);
 
+//requiring local files
+const db = require('./config/mongoose');
+const passportLocal = require('./config/passport-local-strategy');
 
+//define your port number
 const port = 8000;
 
+//use express as function
 const app = express();
 
 app.use(express.urlencoded());
 app.use(cookieParser());
 
+//using saas middleware to convert scss files to css files 
 app.use(saasMiddleware({
     src: './assets/scss',
     dest : './assets/css/',
@@ -37,14 +39,7 @@ app.use(express.urlencoded());
 app.set('layout extractStyles',true );
 app.set('layout extractScripts',true );
 
-
-
-
-
-
-
-
-
+//using express get static files
 app.use(express.static('./assets'));
 
 
@@ -53,6 +48,7 @@ app.use(express.static('./assets'));
 app.set('view engine','ejs');
 app.set('views','./views');
 
+//creating session
 app.use(session({
     name : 'habbitTracker',
     //TODO change the secret in production mode

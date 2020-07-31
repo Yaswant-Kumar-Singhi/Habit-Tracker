@@ -1,8 +1,8 @@
-
+//requiring local files
 const Habit = require('../models/habit')
 
 
-
+//creating a habit of a user
 module.exports.create = function(req,res){
     Habit.create({
         habit : req.body.habit,

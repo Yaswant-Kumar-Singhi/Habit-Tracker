@@ -1,7 +1,8 @@
+//requiring global files
 const passport = require('passport');
-
 const LocalStrategy = require('passport-local').Strategy;
 
+//requiring user model 
 const User = require('../models/user');
 
 //auth using passport
